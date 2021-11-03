@@ -13,12 +13,13 @@ router.get("/", (_, res) => {
   res.send("Hello from API router!");
 });
 
-router.get("/storeGoods", (_, res) => {
-  const storeGoods = client
+router.get("/storeGoods", async (_, res) => {
+  const storeGoods = await client
     .db("storeGoods")
     .collection("storeGoods")
     .find()
     .toArray();
+    console.log('hi', storeGoods)
   res.json(storeGoods);
 });
 
