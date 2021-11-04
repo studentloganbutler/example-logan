@@ -1,4 +1,5 @@
 import express from "express";
+// REMEMBER TO INSTALL CORS
 import cors from "cors";
 import config from "./config.js";
 import router from "./router.js";
