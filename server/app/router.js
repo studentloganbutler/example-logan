@@ -19,7 +19,6 @@ router.get("/storeGoods", async (_, res) => {
     .collection("storeGoods")
     .find()
     .toArray();
-    console.log('hi', storeGoods)
   res.json(storeGoods);
 });
 
