@@ -1,5 +1,5 @@
 import express from "express";
-// import cors from "cors";
+import cors from "cors";
 import config from "./config.js";
 import router from "./router.js";
 
@@ -11,7 +11,7 @@ app.get("/", (_, res) => {
 
 app.use(express.json());
 
-// app.use(cors());
+app.use(cors());
 
 app.use("/api", router);
 

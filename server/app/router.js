@@ -26,7 +26,8 @@ router.get("/products/:id", async (req, res) => {
   const product = await client
     .db("Products")
     .collection("products")
-    .findOne({ _id: ObjectId(req.params.id) });
+    .findOne({ _id: ObjectId(req.params.id) })
+    .toArray();
   res.json(product);
 });
 
